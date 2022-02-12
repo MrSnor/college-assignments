@@ -8,12 +8,19 @@ public class rough {
 
         // var i = 2;
         // do {
-        //     System.out.println(i);
-        //     i++;
+        // System.out.println(i);
+        // i++;
         // } while (i > 6);
+        Jik foo = new Jik(3,4);
+        System.out.println(foo.x);
+    }
+}
 
-        for (int i = 0; i < 11; i++) {
-            
-        }
+class Jik {
+    int x, y;
+
+    Jik(int a, int b) {
+        x = a;
+        y = b;
     }
 }
