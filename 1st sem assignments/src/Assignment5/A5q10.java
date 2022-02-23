@@ -1,9 +1,8 @@
 package Assignment5;
 
-// loooks correct most likely
 public class A5q10 {
     public static void main(String[] args) {
-        sinFormula(45);
+        sinFormula(90);
     }
 
     public static void sinFormula(double x) {
@@ -16,26 +15,26 @@ public class A5q10 {
         int ncount = 1;
         int counter = 1;
         while (true) {
-            if (counter % 2 == 1) {
-                term = -(Math.pow(x, ncount + 2) / factorial(ncount + 2));
-            } else {
-                term = Math.pow(x, ncount + 2) / factorial(ncount + 2);
-            }
-            if (Math.abs(term) < error) {
+            term = Math.pow(x, ncount + 2) / factorial(ncount + 2);
+            if (term < error) {
                 break;
             }
-            sum += term;
+            if (counter % 2 == 1) {
+                sum -= term;
+            } else {
+                sum += term;
+            }
             ncount += 2;
             counter++;
         }
         // showing the value to 2 places after decimal
-        System.out.println(String.format("%.2f",sum)); // string formatting
+        System.out.println(String.format("%.2f", sum)); // string formatting
     }
 
     static double factorial(double i) {
         int product = 1;
         for (double j = i; j > 0; j--) {
-            product*=j;
+            product *= j;
         }
         return product;
     }
