@@ -1,5 +1,5 @@
 package classWork;
-// assignment question
+// assignment question A4q10
 public class q12 {
     public static void main(String[] args) {
         int num = 5;
