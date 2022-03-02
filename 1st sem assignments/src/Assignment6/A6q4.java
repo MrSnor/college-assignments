@@ -2,14 +2,7 @@ package Assignment6;
 
 public class A6q4 {
     public static void main(String args[]) {
-        int s = 0;
-        for (int a = 2000; a <= 2020; a++) {
-            s = s + numberOfDaysInAYear(a);
-
-            // if (numberOfDaysInAYear(a) == 366)
-            //     System.out.print(a + " ");
-        }
-        System.out.println("Sum is: " + s);
+        System.out.println(numberOfDaysInAYear(2000));
     }
 
     public static int numberOfDaysInAYear(int year) {
